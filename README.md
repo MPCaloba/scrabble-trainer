@@ -9,7 +9,7 @@ A Python script to help Scrabble enthusiasts train by generating sentences with 
 
 ## Prerequisites
 
-- Python
+- Python 3.0 or higher
 
 ## Installation
 
@@ -21,7 +21,7 @@ A Python script to help Scrabble enthusiasts train by generating sentences with 
 
 2. Ensure you have Python installed:
     ```bash
-    python --version
+    python3 --version
     ```
    If you do not have Python installed, download and install it from the [official website](https://www.python.org/downloads/).
 
@@ -29,7 +29,7 @@ A Python script to help Scrabble enthusiasts train by generating sentences with 
 
 1. Run the script:
     ```bash
-    python scrabble_trainer.py
+    python3 scrabble_trainer.py
     ```
 
 2. Enter a sentence when prompted. The script will output a new sentence with words replaced according to the specified criteria.
