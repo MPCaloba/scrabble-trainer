@@ -5,10 +5,10 @@ def load_word_list(file_path):
     Load words from a file and return them as a list.
 
     Args:
-    file_path (str): The path to the file containing words.
+        file_path (str): The path to the file containing words.
 
     Returns:
-    list: A list of words.
+        list: A list of words.
     """
     with open(file_path, 'r') as file:
         word_list = file.read().splitlines()
@@ -19,13 +19,13 @@ def find_replacement(original_word, word_list):
     Find a replacement word that starts with the same letter and is the same length as the given word.
 
     Args:
-    original_word (str): The word to find a replacement for.
-    word_list (list): The list of candidate words.
+        original_word (str): The word to find a replacement for.
+        word_list (list): The list of candidate words.
 
     Returns:
-    str: A replacement word if found, otherwise the original word.
+        str: A replacement word if found, otherwise the original word.
     """
-    candidates = [candidate for candidate in word_list if len(candidate) == len(original_word) and candidate[0] == original_word[0]]
+    candidates = [candidate for candidate in word_list if len(candidate) == len(original_word) and candidate[0].lower() == original_word[0].lower()]
     return random.choice(candidates) if candidates else original_word
 
 def replace_words(sentence, word_list):
@@ -33,11 +33,11 @@ def replace_words(sentence, word_list):
     Replace each word in the sentence with a randomly chosen word of the same length and starting letter.
 
     Args:
-    sentence (str): The input sentence.
-    word_list (list): The list of candidate words.
+        sentence (str): The input sentence.
+        word_list (list): The list of candidate words.
 
     Returns:
-    str: The sentence with replaced words.
+        str: The sentence with replaced words.
     """
     sentence_words = sentence.split()
     replaced_words = [find_replacement(word, word_list) for word in sentence_words]
